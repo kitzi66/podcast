@@ -1,0 +1,318 @@
+$color-primario: #060A24
+$color-boton: #00F3BB
+$color-boton-hover: #0000ff
+$color-gradiente: #0000A3
+
+*:not(iframe) 
+    font-family: 'IBM Plex Mono', monospace
+    margin: 0px
+    padding: 0px
+    border: 0px
+    color: $color-primario
+    letter-spacing: 0px
+    box-sizing: border-box
+
+.titulos 
+    font-family: 'IBM Plex Sans', sans-serif
+    font-size: 36px
+    font-weight: normal
+    line-height: 42px
+    padding-top: 5px
+    padding-bottom: 5px
+
+.parrafos 
+    font-family: 'IBM Plex Mono', monospace
+    font-size: 14px
+    line-height: 22px
+    padding-top: 11px
+
+header 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 16px
+    width: 100vw
+    height: 44px
+    position: sticky
+    top: 0
+    background-color: #fff
+    z-index: 11
+    nav 
+        display: none
+
+.logo-corp 
+    width: 24px
+    height: 24px
+
+.div-menu 
+    width: 15px
+    padding-right: 3px
+
+.mobile-menu 
+    width: 18px
+    height: 12px
+
+.menu 
+    list-style: none
+    background-color: blue
+    display: flex
+    flex-direction: column
+    position: fixed
+    width: 100vw
+    top: 44px
+    left: 0px
+    li a 
+        color: white
+        text-decoration: none
+        display: block
+        padding: 0.5em
+
+.label-menu 
+    cursor: pointer
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 12px
+    span
+        height: 2px
+        width: 18px
+        background-color: #000000
+        transform: translateY(0) rotate(0)
+
+.cbox-menu 
+    display: none
+    &:checked ~ .label-menu span.top
+        transform: rotate(45deg) translateX(-2px)
+        transform-origin: left
+    &:checked ~ .label-menu span.bottom
+        transform: rotate(-45deg) translateX(-2px)
+        transform-origin: left
+    &:checked ~ .label-menu span.medium
+        display: none
+    &:checked ~ .nav-principal 
+        display: inline
+
+button 
+    background-color: $color-boton
+    font-size: 16px
+    line-height: 22px
+    margin: 36px auto 0
+    display: block
+    width: 100%
+    height: 48px
+    font-size: 16PX
+    &:hover 
+        background-image: linear-gradient(to right, $color-boton 0%, $color-boton-hover 100%)
+
+.world
+    text-decoration: line-through
+
+section
+    padding: 24px 16px
+    width: 100vw
+
+.episodios
+    background-image: linear-gradient(225deg, $color-boton-hover 0%, $color-gradiente 100%)
+    clip-path: polygon(0 10vw, 100% 0%, 100% calc(100% - 10vw), 0 100%)
+    padding: 24px 16px 120px
+    .titulos
+        color: #FFFFFF
+        padding-top: 40px
+    article
+        padding-top: 11px
+        iframe
+            width: 100%
+            height: 232px
+
+.nosotros
+    margin-top: -115px
+    z-index: 10
+    position: relative
+    img
+        width: 100%
+        padding-bottom: 27px
+
+.novedades
+    margin-top: 24px
+    background-image: linear-gradient(225deg, $color-boton-hover 0%, $color-gradiente 100%)
+    clip-path: polygon(0 9vw, 100% 0%, 100% 100%, 0 100%)
+    padding: 64px 16px 67px
+    display: inline-block
+    text-align: center
+    h1
+        color: #fff
+
+.entrevistas
+    padding: 27px 0 24px 0
+    img
+        width: 100%
+        display: block
+    .titulos
+        padding-left: 16px
+
+.topicos
+    img
+        padding: 13px 0 13px 0
+    article
+        padding: 36px 0 0 0
+        display: block
+        text-align: center
+    h2
+        font-weight: bold
+        font-size: 24px
+        line-height: 32px
+
+iframe
+    padding-bottom: 11px
+
+footer
+    padding: 24px 0
+    .copyright
+        font-size: 14px
+        text-align: center
+        line-height: 22px
+
+    nav
+        padding-top: 16px
+        padding-bottom: 7px
+        ul
+            display: flex
+            justify-content: space-evenly
+            list-style: none
+            line-height: 28px
+
+@media screen and (min-width: 640px) 
+    header 
+        height: 80px
+        width: 100vw
+        padding: 0px 100px
+        nav
+            display: inline-block
+
+    
+    
+    .titulos
+        font-size: 48px
+
+    .parrafos
+        font-size: 16px
+        line-height: 24px
+    
+    .principal
+        padding-left: 200px 
+        padding-top: 120px
+        .titulos
+            font-size: 64px
+            line-height: 84px
+        p
+            width: 628px
+            padding-top: 0px
+
+    #episodios
+        margin-top: 5px
+        padding-top: 13vw
+        padding-bottom: 190px
+        .titulos
+            padding-left: 200px
+            padding-bottom: 16px
+            padding-top: 0px
+
+
+    .div-menu 
+        display: block
+        position: unset
+        float: right
+        width: fit-content
+
+    .label-menu
+        display: none
+
+    .menu 
+        flex-direction: row
+        background-color: #FFFFFF
+        width: auto
+        position: relative
+        top: 0px
+        left: 0px
+        li 
+            &:hover 
+                text-decoration: line-through
+                color: $color-boton
+            &:active 
+                text-decoration: line-through
+                color: white
+            a 
+                color: #000000
+    
+    .mobile-menu 
+        display: none
+    
+    #principal button 
+        width: 226px
+        height: 56px
+        margin: 56px 0 0 0
+    
+    .nosotros
+        padding: 0 200px
+        display: flex
+        align-items: center
+        margin-top: -200px
+        justify-content: space-between
+        img
+            width: 457px
+        p
+            width: 464px
+
+    .entrevistas
+        .titulos
+            padding-left: 200px
+        article
+            display: flex
+            flex-wrap: wrap
+            padding-top: 36px
+        img 
+            width: 33.33%
+
+    .topicos
+        padding: 40px 200px
+        div
+            display: flex
+            justify-content: space-between
+            padding-top: 56px
+        article
+            width: 260px
+            padding: 0px
+
+    .novedades
+        height: 33.33vw
+        .titulos
+            padding-top: 110px
+        button
+            width: 345px
+            height: 56px
+
+    .podcasts
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+    
+    iframe
+        flex-basis: 41%
+        padding-bottom: 72px
+
+    footer
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 36px 100px 31px
+        .copyright
+            font-size: 16px
+            line-height: 28px
+        nav
+            padding: 0px
+            ul
+                width: 200px
+                li
+                    font-size: 18px
+                    line-height: 28px
+    

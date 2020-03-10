@@ -1,0 +1,307 @@
+*:not(iframe) {
+  font-family: "IBM Plex Mono", monospace;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  color: #060A24;
+  letter-spacing: 0px;
+  box-sizing: border-box; }
+
+.titulos {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 42px;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+.parrafos {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  line-height: 22px;
+  padding-top: 11px; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  width: 100vw;
+  height: 44px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 11; }
+  header nav {
+    display: none; }
+
+.logo-corp {
+  width: 24px;
+  height: 24px; }
+
+.div-menu {
+  width: 15px;
+  padding-right: 3px; }
+
+.mobile-menu {
+  width: 18px;
+  height: 12px; }
+
+.menu {
+  list-style: none;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100vw;
+  top: 44px;
+  left: 0px; }
+  .menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.5em; }
+
+.label-menu {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 12px; }
+  .label-menu span {
+    height: 2px;
+    width: 18px;
+    background-color: #000000;
+    transform: translateY(0) rotate(0); }
+
+.cbox-menu {
+  display: none; }
+  .cbox-menu:checked ~ .label-menu span.top {
+    transform: rotate(45deg) translateX(-2px);
+    transform-origin: left; }
+  .cbox-menu:checked ~ .label-menu span.bottom {
+    transform: rotate(-45deg) translateX(-2px);
+    transform-origin: left; }
+  .cbox-menu:checked ~ .label-menu span.medium {
+    display: none; }
+  .cbox-menu:checked ~ .nav-principal {
+    display: inline; }
+
+button {
+  background-color: #00F3BB;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 36px auto 0;
+  display: block;
+  width: 100%;
+  height: 48px;
+  font-size: 16PX; }
+  button:hover {
+    background-image: linear-gradient(to right, #00F3BB 0%, #0000ff 100%); }
+
+.world {
+  text-decoration: line-through; }
+
+section {
+  padding: 24px 16px;
+  width: 100vw; }
+
+.episodios {
+  background-image: linear-gradient(225deg, #0000ff 0%, #0000A3 100%);
+  clip-path: polygon(0 10vw, 100% 0%, 100% calc(100% - 10vw), 0 100%);
+  padding: 24px 16px 120px; }
+  .episodios .titulos {
+    color: #FFFFFF;
+    padding-top: 40px; }
+  .episodios article {
+    padding-top: 11px; }
+    .episodios article iframe {
+      width: 100%;
+      height: 232px; }
+
+.nosotros {
+  margin-top: -115px;
+  z-index: 10;
+  position: relative; }
+  .nosotros img {
+    width: 100%;
+    padding-bottom: 27px; }
+
+.novedades {
+  margin-top: 24px;
+  background-image: linear-gradient(225deg, #0000ff 0%, #0000A3 100%);
+  clip-path: polygon(0 9vw, 100% 0%, 100% 100%, 0 100%);
+  padding: 64px 16px 67px;
+  display: inline-block;
+  text-align: center; }
+  .novedades h1 {
+    color: #fff; }
+
+.entrevistas {
+  padding: 27px 0 24px 0; }
+  .entrevistas img {
+    width: 100%;
+    display: block; }
+  .entrevistas .titulos {
+    padding-left: 16px; }
+
+.topicos img {
+  padding: 13px 0 13px 0; }
+.topicos article {
+  padding: 36px 0 0 0;
+  display: block;
+  text-align: center; }
+.topicos h2 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px; }
+
+iframe {
+  padding-bottom: 11px; }
+
+footer {
+  padding: 24px 0; }
+  footer .copyright {
+    font-size: 14px;
+    text-align: center;
+    line-height: 22px; }
+  footer nav {
+    padding-top: 16px;
+    padding-bottom: 7px; }
+    footer nav ul {
+      display: flex;
+      justify-content: space-evenly;
+      list-style: none;
+      line-height: 28px; }
+
+@media screen and (min-width: 640px) {
+  header {
+    height: 80px;
+    width: 100vw;
+    padding: 0px 100px; }
+    header nav {
+      display: inline-block; }
+
+  .titulos {
+    font-size: 48px; }
+
+  .parrafos {
+    font-size: 16px;
+    line-height: 24px; }
+
+  .principal {
+    padding-left: 200px;
+    padding-top: 120px; }
+    .principal .titulos {
+      font-size: 64px;
+      line-height: 84px; }
+    .principal p {
+      width: 628px;
+      padding-top: 0px; }
+
+  #episodios {
+    margin-top: 5px;
+    padding-top: 13vw;
+    padding-bottom: 190px; }
+    #episodios .titulos {
+      padding-left: 200px;
+      padding-bottom: 16px;
+      padding-top: 0px; }
+
+  .div-menu {
+    display: block;
+    position: unset;
+    float: right;
+    width: fit-content; }
+
+  .label-menu {
+    display: none; }
+
+  .menu {
+    flex-direction: row;
+    background-color: #FFFFFF;
+    width: auto;
+    position: relative;
+    top: 0px;
+    left: 0px; }
+    .menu li:hover {
+      text-decoration: line-through;
+      color: #00F3BB; }
+    .menu li:active {
+      text-decoration: line-through;
+      color: white; }
+    .menu li a {
+      color: #000000; }
+
+  .mobile-menu {
+    display: none; }
+
+  #principal button {
+    width: 226px;
+    height: 56px;
+    margin: 56px 0 0 0; }
+
+  .nosotros {
+    padding: 0 200px;
+    display: flex;
+    align-items: center;
+    margin-top: -200px;
+    justify-content: space-between; }
+    .nosotros img {
+      width: 457px; }
+    .nosotros p {
+      width: 464px; }
+
+  .entrevistas .titulos {
+    padding-left: 200px; }
+  .entrevistas article {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 36px; }
+  .entrevistas img {
+    width: 33.33%; }
+
+  .topicos {
+    padding: 40px 200px; }
+    .topicos div {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 56px; }
+    .topicos article {
+      width: 260px;
+      padding: 0px; }
+
+  .novedades {
+    height: 33.33vw; }
+    .novedades .titulos {
+      padding-top: 110px; }
+    .novedades button {
+      width: 345px;
+      height: 56px; }
+
+  .podcasts {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+
+  iframe {
+    flex-basis: 41%;
+    padding-bottom: 72px; }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 100px 31px; }
+    footer .copyright {
+      font-size: 16px;
+      line-height: 28px; }
+    footer nav {
+      padding: 0px; }
+      footer nav ul {
+        width: 200px; }
+        footer nav ul li {
+          font-size: 18px;
+          line-height: 28px; } }
+
+/*# sourceMappingURL=styles.css.map */
