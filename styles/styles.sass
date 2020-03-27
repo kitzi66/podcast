@@ -2,6 +2,7 @@ $color-primario: #060A24
 $color-boton: #00F3BB
 $color-boton-hover: #0000ff
 $color-gradiente: #0000A3
+$color-punto: #0000EC
 $font-principal: 18px
 $font-16: 0.89rem
 $font-14: 0.78rem
@@ -10,7 +11,7 @@ $font-48: 2.67rem
 $font-64: 3.555rem
 $font-24: 1.333rem
 
-*:not(iframe) 
+*:not(iframe)
     font-family: 'IBM Plex Mono', monospace
     margin: 0px
     padding: 0px
@@ -39,21 +40,22 @@ header
     justify-content: space-between
     align-items: center
     padding: 0 16px
-    width: 100vw
+    width: 100%
     height: 44px
     position: sticky
     top: 0
     background-color: #fff
     z-index: 11
+    .div-logo
+        height: $font-24
     nav 
         display: none
 
 .logo-corp 
-    width: 24px
-    height: 24px
+    width: $font-24
 
 .div-menu 
-    width: 15px
+    width: 21px
     padding-right: 3px
 
 .mobile-menu 
@@ -101,20 +103,23 @@ header
     &:checked ~ .nav-principal 
         display: inline
 
-button 
+.button 
+    text-decoration: none
     background-color: $color-boton
     font-size: $font-16
+    font-weight: 500
     line-height: 22px
     margin: 36px auto 0
-    display: block
+    display: flex
     width: 100%
     height: 48px
+    align-items: center
+    justify-content: space-evenly
     &:hover 
         background-image: linear-gradient(to right, $color-boton 0%, $color-boton-hover 100%)
 
 .world
     text-decoration: line-through
-    font-size: $font-36
 
 section
     padding: 24px 16px
@@ -123,15 +128,21 @@ section
 .episodios
     background-image: linear-gradient(225deg, $color-boton-hover 0%, $color-gradiente 100%)
     clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0 100%)
-    padding: 24px 16px 120px
+    padding: 24px 11px 120px
     .titulos
         color: #FFFFFF
-        padding-top: 40px
+        padding-top: $font-64
+        padding-bottom: 10px
+        padding-left: 5px
     article
         padding-top: 11px
+        display: flex
+        flex-direction: column
         iframe
             width: 100%
-            height: 232px
+            min-height: 232px
+            border: 0
+            background-color: transparent
 
 .nosotros
     margin-top: -115px
@@ -139,20 +150,20 @@ section
     position: relative
     img
         width: 100%
-        padding-bottom: 27px
+        padding-bottom: 22px
 
 .novedades
-    margin-top: 24px
     background-image: linear-gradient(225deg, $color-boton-hover 0%, $color-gradiente 100%)
     clip-path: polygon(0 9vw, 100% 0%, 100% 100%, 0 100%)
-    padding: 64px 16px 67px
+    padding: 59px 16px 67px
     display: inline-block
     text-align: center
-    h1
+    h1, h2
         color: #fff
 
 .entrevistas
-    padding: 27px 0 24px 0
+    padding: 25px 0 24px 0
+    padding-top: 9px
     img
         width: 100%
         display: block
@@ -160,13 +171,19 @@ section
         padding-left: 16px
 
 .topicos
+    padding-top: 19px
+    padding-bottom: 6px
+    div
+        display: flex
+        flex-direction: column
+        padding-top: 19px
     img
-        padding: 13px 0 13px 0
+        padding: 13px 0 8px 0
     article
-        padding: 36px 0 0 0
+        padding-bottom: 36px
         display: block
         text-align: center
-    h2
+    h3
         font-weight: bold
         font-size: $font-24
         line-height: 32px
@@ -189,16 +206,23 @@ footer
             justify-content: space-evenly
             list-style: none
             line-height: 28px
+            li
+                a
+                    i
+                        font-size: $font-16
 
-@media screen and (min-width: 640px) 
-    header 
+@media screen and (min-width: 800px) 
+    header
         height: 80px
         width: 100vw
-        padding: 0px 3%
+        padding: 0px 6.94%
+        .div-logo
+            height: $font-36
         nav
             display: inline-block
 
-    
+    .logo-corp
+        width: $font-36
     
     .titulos
         font-size: $font-48
@@ -208,22 +232,34 @@ footer
         line-height: 24px
     
     .principal
-        padding: 120px 12%
+        padding: 120px 12% 0 
         .titulos
             font-size: $font-64
             line-height: 84px
+        .punto
+            color: $color-punto
         p
-            width: 75%
+            width: 60%
             padding-top: 0px
+        .button 
+            width: 226px
+            height: 56px
+            margin: 56px 0 0 0
 
     .episodios
         margin-top: 5px
         padding-top: 100px
         padding-bottom: 150px
+        clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%)
+        padding: 40px 0 160px
         .titulos
             padding-left: 200px
             padding-bottom: 16px
-            padding-top: 0px
+            padding-top: 86px
+        article
+            flex-direction: row
+            flex-wrap: wrap
+            justify-content: space-evenly
 
 
     .div-menu 
@@ -255,23 +291,19 @@ footer
     .mobile-menu 
         display: none
     
-    #principal button 
-        width: 226px
-        height: 56px
-        margin: 56px 0 0 0
-    
     .nosotros
         padding: 5% 12%
         display: flex
         align-items: center
-        margin-top: -200px
-        justify-content: space-between
+        margin-top: -230px
+        justify-content: space-around
         img
-            width: 50%
+            width: 42%
             max-width: 640px
         p
-            width: 100%
+            width: 32vw
             max-width: 800px
+            padding-top: 19px
 
     .entrevistas
         .titulos
@@ -286,7 +318,7 @@ footer
     .topicos
         padding: 40px 12%
         div
-            display: flex
+            flex-direction: row
             justify-content: space-between
             padding-top: 56px
         article
@@ -296,7 +328,7 @@ footer
     .novedades
         .titulos
             padding-top: 110px
-        button
+        .button
             width: 345px
             height: 56px
 

@@ -27,21 +27,22 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
-  width: 100vw;
+  width: 100%;
   height: 44px;
   position: sticky;
   top: 0;
   background-color: #fff;
   z-index: 11; }
+  header .div-logo {
+    height: 1.333rem; }
   header nav {
     display: none; }
 
 .logo-corp {
-  width: 24px;
-  height: 24px; }
+  width: 1.333rem; }
 
 .div-menu {
-  width: 15px;
+  width: 21px;
   padding-right: 3px; }
 
 .mobile-menu {
@@ -89,20 +90,23 @@ header {
   .cbox-menu:checked ~ .nav-principal {
     display: inline; }
 
-button {
+.button {
+  text-decoration: none;
   background-color: #00F3BB;
   font-size: 0.89rem;
+  font-weight: 500;
   line-height: 22px;
   margin: 36px auto 0;
-  display: block;
+  display: flex;
   width: 100%;
-  height: 48px; }
-  button:hover {
+  height: 48px;
+  align-items: center;
+  justify-content: space-evenly; }
+  .button:hover {
     background-image: linear-gradient(to right, #00F3BB 0%, #0000ff 100%); }
 
 .world {
-  text-decoration: line-through;
-  font-size: 2rem; }
+  text-decoration: line-through; }
 
 section {
   padding: 24px 16px;
@@ -111,15 +115,21 @@ section {
 .episodios {
   background-image: linear-gradient(225deg, #0000ff 0%, #0000A3 100%);
   clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0 100%);
-  padding: 24px 16px 120px; }
+  padding: 24px 11px 120px; }
   .episodios .titulos {
     color: #FFFFFF;
-    padding-top: 40px; }
+    padding-top: 3.555rem;
+    padding-bottom: 10px;
+    padding-left: 5px; }
   .episodios article {
-    padding-top: 11px; }
+    padding-top: 11px;
+    display: flex;
+    flex-direction: column; }
     .episodios article iframe {
       width: 100%;
-      height: 232px; }
+      min-height: 232px;
+      border: 0;
+      background-color: transparent; }
 
 .nosotros {
   margin-top: -115px;
@@ -127,36 +137,43 @@ section {
   position: relative; }
   .nosotros img {
     width: 100%;
-    padding-bottom: 27px; }
+    padding-bottom: 22px; }
 
 .novedades {
-  margin-top: 24px;
   background-image: linear-gradient(225deg, #0000ff 0%, #0000A3 100%);
   clip-path: polygon(0 9vw, 100% 0%, 100% 100%, 0 100%);
-  padding: 64px 16px 67px;
+  padding: 59px 16px 67px;
   display: inline-block;
   text-align: center; }
-  .novedades h1 {
+  .novedades h1, .novedades h2 {
     color: #fff; }
 
 .entrevistas {
-  padding: 27px 0 24px 0; }
+  padding: 25px 0 24px 0;
+  padding-top: 9px; }
   .entrevistas img {
     width: 100%;
     display: block; }
   .entrevistas .titulos {
     padding-left: 16px; }
 
-.topicos img {
-  padding: 13px 0 13px 0; }
-.topicos article {
-  padding: 36px 0 0 0;
-  display: block;
-  text-align: center; }
-.topicos h2 {
-  font-weight: bold;
-  font-size: 1.333rem;
-  line-height: 32px; }
+.topicos {
+  padding-top: 19px;
+  padding-bottom: 6px; }
+  .topicos div {
+    display: flex;
+    flex-direction: column;
+    padding-top: 19px; }
+  .topicos img {
+    padding: 13px 0 8px 0; }
+  .topicos article {
+    padding-bottom: 36px;
+    display: block;
+    text-align: center; }
+  .topicos h3 {
+    font-weight: bold;
+    font-size: 1.333rem;
+    line-height: 32px; }
 
 iframe {
   padding-bottom: 11px; }
@@ -175,14 +192,21 @@ footer {
       justify-content: space-evenly;
       list-style: none;
       line-height: 28px; }
+      footer nav ul li a i {
+        font-size: 0.89rem; }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 800px) {
   header {
     height: 80px;
     width: 100vw;
-    padding: 0px 3%; }
+    padding: 0px 6.94%; }
+    header .div-logo {
+      height: 2rem; }
     header nav {
       display: inline-block; }
+
+  .logo-corp {
+    width: 2rem; }
 
   .titulos {
     font-size: 2.67rem; }
@@ -192,22 +216,34 @@ footer {
     line-height: 24px; }
 
   .principal {
-    padding: 120px 12%; }
+    padding: 120px 12% 0; }
     .principal .titulos {
       font-size: 3.555rem;
       line-height: 84px; }
+    .principal .punto {
+      color: #0000EC; }
     .principal p {
-      width: 75%;
+      width: 60%;
       padding-top: 0px; }
+    .principal .button {
+      width: 226px;
+      height: 56px;
+      margin: 56px 0 0 0; }
 
   .episodios {
     margin-top: 5px;
     padding-top: 100px;
-    padding-bottom: 150px; }
+    padding-bottom: 150px;
+    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
+    padding: 40px 0 160px; }
     .episodios .titulos {
       padding-left: 200px;
       padding-bottom: 16px;
-      padding-top: 0px; }
+      padding-top: 86px; }
+    .episodios article {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly; }
 
   .div-menu {
     display: block;
@@ -237,23 +273,19 @@ footer {
   .mobile-menu {
     display: none; }
 
-  #principal button {
-    width: 226px;
-    height: 56px;
-    margin: 56px 0 0 0; }
-
   .nosotros {
     padding: 5% 12%;
     display: flex;
     align-items: center;
-    margin-top: -200px;
-    justify-content: space-between; }
+    margin-top: -230px;
+    justify-content: space-around; }
     .nosotros img {
-      width: 50%;
+      width: 42%;
       max-width: 640px; }
     .nosotros p {
-      width: 100%;
-      max-width: 800px; }
+      width: 32vw;
+      max-width: 800px;
+      padding-top: 19px; }
 
   .entrevistas .titulos {
     padding-left: 12%; }
@@ -267,7 +299,7 @@ footer {
   .topicos {
     padding: 40px 12%; }
     .topicos div {
-      display: flex;
+      flex-direction: row;
       justify-content: space-between;
       padding-top: 56px; }
     .topicos article {
@@ -276,7 +308,7 @@ footer {
 
   .novedades .titulos {
     padding-top: 110px; }
-  .novedades button {
+  .novedades .button {
     width: 345px;
     height: 56px; }
 
